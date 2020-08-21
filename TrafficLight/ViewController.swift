@@ -30,15 +30,12 @@ class ViewController: UIViewController {
 
     @IBAction func startPushed(_ sender: Any) {
         if isOn == 0 {
-            //self.isOn = false
             self.startButton.setTitle("NEXT", for: .normal)
             orange.alpha = 0.5
             green.alpha = 0.5
             red.alpha = 1
             isOn += 1
         }else if isOn == 1{
-            //self.isOn = true
-            self.startButton.setTitle("NEXT", for: .normal)
             red.alpha = 0.5
                    orange.alpha = 1
                    green.alpha = 0.5

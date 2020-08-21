@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view verifyAmbiguity="off" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-R2-I8J">
+                                <rect key="frame" x="157" y="108" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PRo-V5-aIf"/>
+                                    <constraint firstAttribute="width" constant="100" id="wzs-UT-r6X"/>
+                                </constraints>
+                            </view>
+                            <view verifyAmbiguity="off" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnV-E3-vfl">
+                                <rect key="frame" x="157" y="428" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="J1e-yN-j0W"/>
+                                    <constraint firstAttribute="width" constant="100" id="ppE-I7-aSf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc8-mv-zFw">
+                                <rect key="frame" x="132" y="766" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WyU-4K-uch"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ndI-4U-0U7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLs-pp-Wti"/>
+                                </connections>
+                            </button>
+                            <view verifyAmbiguity="off" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i19-W3-rKg">
+                                <rect key="frame" x="157" y="268" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="96y-qQ-ati"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ki3-rK-ej1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mc8-mv-zFw" secondAttribute="bottom" constant="46" id="0Ex-GV-Iaa"/>
+                            <constraint firstItem="mnV-E3-vfl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cct-5n-iqi"/>
+                            <constraint firstItem="2ey-R2-I8J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iak-Qz-qKP"/>
+                            <constraint firstItem="mc8-mv-zFw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N8p-2J-aoC"/>
+                            <constraint firstItem="2ey-R2-I8J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="ZJr-va-N6j"/>
+                            <constraint firstItem="i19-W3-rKg" firstAttribute="top" secondItem="2ey-R2-I8J" secondAttribute="bottom" constant="60" id="df8-bh-kdf"/>
+                            <constraint firstItem="i19-W3-rKg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hVn-Po-GOw"/>
+                            <constraint firstItem="mnV-E3-vfl" firstAttribute="top" secondItem="i19-W3-rKg" secondAttribute="bottom" constant="60" id="p7L-lj-3Hp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="green" destination="mnV-E3-vfl" id="pRJ-WR-WSZ"/>
+                        <outlet property="orange" destination="i19-W3-rKg" id="akU-IX-ZBf"/>
+                        <outlet property="red" destination="2ey-R2-I8J" id="zDD-j2-uCk"/>
+                        <outlet property="startButton" destination="mc8-mv-zFw" id="K44-Qk-VhI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-317" y="-48"/>
         </scene>
     </scenes>
 </document>
